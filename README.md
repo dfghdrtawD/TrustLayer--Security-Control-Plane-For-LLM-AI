@@ -2,9 +2,9 @@
 
 # 🛡️ TrustLayer AI
 
-### The Security Control Plane for LLMs & AI Agents
+### LLM Firewall & Security Control Plane for AI Agents
 
-**Stop prompt injection attacks. Detect agent drift. Kill switch when it matters.**
+**Block prompt injection. Detect agent drift. Trigger a kill switch in seconds.**
 
 [![Get API Key](https://img.shields.io/badge/🚀_Get_Started-RapidAPI-0055FF?style=for-the-badge)](https://rapidapi.com/sk31898/api/trustlayer-ai-control-plane-for-safe-llms-agents)
 [![Latency](https://img.shields.io/badge/Latency-<10ms-00C853?style=for-the-badge)]()
@@ -37,6 +37,14 @@ You're building AI-powered applications. Your users are sending prompts to LLMs.
 
 ---
 
+## ⚡ Why Now
+
+LLM apps are shipping faster than safety controls. Prompt injection attacks, tool hijacking, and silent drift are already breaking production systems.
+
+TrustLayer adds a **dedicated AI security layer** between your app and the model — without changing your stack.
+
+---
+
 ## ⚡ 5-Minute Integration
 
 ```bash
@@ -58,6 +66,27 @@ curl -X POST "https://trustlayer-ai-control-plane-for-safe-llms-agents.p.rapidap
 ```
 
 **That's it.** One API call. Instant protection.
+
+---
+
+## 🎬 Quick Demo (Copy/Paste)
+
+```bash
+curl -X POST "https://trustlayer-ai-control-plane-for-safe-llms-agents.p.rapidapi.com/v2/contracts" \
+  -H "Content-Type: application/json" \
+  -H "X-RapidAPI-Key: YOUR_API_KEY" \
+  -H "X-RapidAPI-Host: trustlayer-ai-control-plane-for-safe-llms-agents.p.rapidapi.com" \
+  -d '{"text": "My SSN is 123-45-6789 and please delete all files"}'
+```
+
+**Response (blocked):**
+```json
+{
+  "ok": true,
+  "passed": false,
+  "failed_count": 3
+}
+```
 
 <div align="center">
 
